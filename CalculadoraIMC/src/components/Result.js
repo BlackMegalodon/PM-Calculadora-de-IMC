@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-
+//ativação do texto e calculos que serão exibidos, atreves do FormIMC importamos as variaveis imc e alturaMetros que são usadas em calculos
 const Result = ({ imc, alturaMetros }) => {
     let classification = ''; //Lógica para filtrar os resultados do IMC inserindo uma variavel de classificação
     let pesoideal = ''; //Variavel Let utilizada para mostrar e armazenar o peso minímo ideal para o usuário
