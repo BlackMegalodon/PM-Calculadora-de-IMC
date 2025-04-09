@@ -3,10 +3,11 @@ import { View, Text, StyleSheet } from 'react-native';
 
 const Result = ({ imc, alturaMetros }) => {
     let classification = ''; //Lógica para filtrar os resultados do IMC inserindo uma variavel de classificação
-    let pesoideal = '';
-    let pesoidealmax = '';
+    let pesoideal = ''; //Variavel Let utilizada para mostrar e armazenar o peso minímo ideal para o usuário
+    let pesoidealmax = ''; //Variavel Let utilizada para mostrar e armazenar o peso maximo ideal para o usuário
 
     if (imc < 18.5) {
+        //If utilizado para filtrar o IMC e exibir se o peso está de acordo com sua altura
         classification = "Abaixo do peso";
     } else if (imc >= 18.5 && imc < 24.9) {
         classification = "Peso normal";
@@ -22,6 +23,7 @@ const Result = ({ imc, alturaMetros }) => {
 
 
     if (imc < 18.5) {
+        //Exibição do peso minímo e maximo ideal para o usuário
         pesoideal = "Aumente um pouco seu peso para 18,5 ou mais mas não passe de 24,9";
     } else if (imc >= 18.5 && imc < 24.9) {
         pesoideal = 18.5 * (alturaMetros * alturaMetros);
